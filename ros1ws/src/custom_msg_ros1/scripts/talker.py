@@ -19,7 +19,7 @@ class MinimalPublisher(Node):
         msg.description = "description_DEF"
         msg.qos = 42.0
         self.publisher_.publish(msg)
-        self.get_logger().info(f"Publishing: {msg.originator} {msg.description} {msg.qos}")
+        self.get_logger().info("Publishing: {} {} {}".format(msg.originator, msg.description, msg.qos))
 
 
 def main(args=None):
